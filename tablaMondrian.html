@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composición estilo Mondrian</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            height: 400px;
+        }
+        td {
+            border: 4px solid black;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="blue" colspan="2" rowspan="2"></td>
+            <td class="white" colspan="2"></td>
+            <td class="yellow"></td>
+        </tr>
+        <tr>
+            <td class="white"></td>
+            <td class="red" colspan="2" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="yellow" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td class="blue" colspan="2"></td>
+            <td class="white"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Mapa</title>
+    <style>
+        .fondoAmarillo {
+            background-color: rgb(95, 95, 12);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 24pt;
+        }
+
+        label:hover {
+            font-weight: bold;
+            font-size: 28pt;
+        }
+
+        .area {
+            cursor: pointer;
+            fill: rgba(0, 0, 0, 0.308); 
+            stroke: rgb(255, 0, 0);
+            stroke-width: 2;
+        }
+
+        
+
+        .area:hover {
+            fill: rgb(0, 255, 255); /* Azul cuando se pasa el ratón */
+            stroke: black;
+            stroke-width: 2;
+        }
+
+        /* Estilo para las áreas seleccionadas */
+        .selected {
+            fill: rgba(0, 255, 0);
+            stroke: rgb(234, 0, 255);
+            stroke-width: 2;
+        }
+
+        .area.selected:hover{
+            fill: rgba(0, 255, 0);
+        }
+    </style>
+
+    <script>
+        function selectArea(area, element) {
+            console.log("Ha seleccionado el área: " + area);
+
+            // Establecer el valor del campo oculto
+            document.getElementById('provincia').value = area;
+
+            // Establecer el valor del campo de texto
+            document.getElementById('nombre').value = area;
+
+            // Resaltar el área seleccionada con una clase
+            element.classList.toggle("selected");
+        }
+    </script>
+</head>
+<body>
+    <form action="formulario.php" method="post">
+        <!-- El input oculto -->
+        <input type="hidden" name="provincia" id="provincia" value="">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" class="fondoAmarillo" readonly>
+        <br><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+    <!-- Mapa con imagen -->
+    <svg width="612" height="612" viewBox="0 0 612 612">
+        <!-- Fondo de la imagen -->
+        <image xlink:href="andalousie49.png" x="0" y="0" width="612" height="612"/>
+
+        <!-- Provincia de Huelva -->
+        <polygon points="130,368,37,332,19,257,83,208,148,235" class="area" onclick="selectArea('Huelva', this)" />
+        
+        <!-- Provincia de Sevilla -->
+        <polygon points="154,240,191,203,302,324,134,374,142,336" class="area" onclick="selectArea('Sevilla', this)" />
+
+        <!-- Provincia de Córdoba -->
+        <polygon points="213,176,220,225,307,319,355,300,333,192,265,149,244,155" class="area" onclick="selectArea('Córdoba', this)" />
+
+        <!-- Provincia de Jaén -->
+        <polygon points="346,186,363,301,457,264,509,206,494,172,389,183" class="area" onclick="selectArea('Jaén', this)" />
+
+        <!-- Provincia de Almería -->
+        <polygon points="454,380,532,246,594,310,546,382" class="area" onclick="selectArea('Almería', this)" />
+
+        <!-- Provincia de Granada -->
+        <polygon points="335,329,383,384,442,378,529,243,509,224,470,274,353,311,347,317" class="area" onclick="selectArea('Granada', this)" />
+
+        <!-- Provincia de Málaga -->
+        <polygon points="240,431,221,409,276,338,324,324,373,380,248,424" class="area" onclick="selectArea('Málaga', this)" />
+
+        <!-- Provincia de Cadiz -->
+        <polygon points="132,385,164,441,212,463,228,443,219,417,187,407,214,399,232,364,142,376,137,377" class="area" onclick="selectArea('Cádiz', this)" />
+    </svg>
+
+</body>
+</html>

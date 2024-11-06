@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CuadroMondrian</title>
+        <style>
+            table{
+                border: 1px solid black;
+                border-spacing: 0;
+                border-collapse: collapse;
+                width: 400px;
+                height: 400px;
+            }
+            td{
+                border: 10px black solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <caption>Cuadro Mondrian</caption>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td style="background-color: red;" colspan="2"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"></td>
+                    <td rowspan="2" colspan="2"></td>
+                    <td style="background-color: red;"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+              
+                </tr>
+
+                <tr>
+                    <td style="background-color: blue;"></td>
+                    <td></td>
+                    <td style="background-color: yellow;" colspan="2" rowspan="2"></td>
+
+
+                </tr>
+
+                
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

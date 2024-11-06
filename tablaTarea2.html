@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <style>
+        h1#encabezadoCentrado {
+            text-align: center;
+        }
+        table, td, th {
+            text-align: center;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        .centrado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #abajo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1px;
+        }
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #azul {
+            color: blue;
+        }
+        th {
+            background-color: rgb(255, 255, 126);
+        }
+        #rojito {
+            color: red;
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="abajo">Estimacion de Ventas</h3>
+    <div class="centrado">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Unidades</th>
+                <th>Previsión 2013</th>
+                <th>Prevision 2014</th>
+            </tr>
+            <tr>
+                <td>Art. 1</td>
+                <td id="azul">6000</td>
+                <td>4000</td>
+                <td>1500</td>
+            </tr>
+            <tr>
+                <td>Art. 2</td>
+                <td>50</td>
+                <td colspan="2" id="rojito">0</td>
+            </tr>
+            <tr>
+                <td>Art. 3</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Art. 4</td>
+                <td>300</td>
+                <td colspan="2"><b>210</b></td>
+            </tr>
+            <tr>
+                <td>Art. 5</td>
+                <td>90</td>
+                <td rowspan="2" style="border: none;"><b>100</b></td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Art. 6</td>
+                <td>80</td>
+                <td>110</td>
+            </tr>
+        </table>
+    </div>
+
+ 
+    <br><br><br>
+
+    <div class="centrado">
+    <button type="button" class="negrito" onclick="window.location.href='tablaTarea.html'">Pagina anterior</button>
+    <br>
+    <button type="button" class="negrito" onclick="window.location.href='tablaTarea3.html'">Siguiente Pagina</button>
+    </div>
+    
+
+</body>
+</html>

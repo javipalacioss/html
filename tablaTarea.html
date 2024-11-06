@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <style>
+        .centrar{
+            text-align: center;
+        }
+
+        body{
+            background-color: yellow;
+            color: black;
+        }
+
+        h1#encabezadoAzul{
+            color: blue;
+        }
+
+        .negrito{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="formulario.php" method="post">
+    <h1 id="encabezadoAzul">Tema 1</h1>
+    <ol>
+        <li><h2>Los invertebrados</h2></li>
+    </ol>
+    <p>Los invertebrados son como los vertebrados, pero sin columna vertebral.</p>
+    
+    <ol start="2">
+        <li><h2>Tabla de animales</h2>
+            <table>
+                <tr>
+                    <td class="centrar"><b>Nombre</b></td>
+                    <td class="centrar"><b>Longitud Media</b></td>
+                </tr>
+                <tr>
+                    <td>Caracol</td>
+                    <td>5 cm</td>
+                </tr>
+                <tr>
+                    <td>Lombriz de tierra</td>
+                    <td>20 cm</td>
+                </tr>
+            </table>
+        </li>
+    </ol>
+
+    <h1>Puede enviar un email:</h1>
+
+    <label for="asunto">Asunto:</label>
+    <input type="text" name="asunto" id="asunto" required>
+
+    <br>
+    <br>
+
+    <label for="menuDesplegable">Desplegable:</label>
+    <select name="menuDesplegable" id="menuDesplegable">
+        <option value="valor1">Valor1</option>
+        <option value="valor1">Valor2</option>
+        <option value="valor1">Valor3</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label for="contenido"></label>
+    <textarea name="contenido" id="contenido" placeholder="Contenido:" rows="5" required></textarea>
+
+    <br>
+    <br>
+    <div id="boton">
+        <input type="submit" value="Enviar" name="enviar" class="negrito">
+        <button type="button" class="negrito" onclick="window.location.href='tablaTarea2.html'">Siguiente Pagina</button>
+    </div>
+    </form>
+</body>
+</html>

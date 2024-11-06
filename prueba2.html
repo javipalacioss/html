@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		h1 {color:blue;}
+		h2 {color:yellow;}
+		body {background-color:green;}
+		td { border-bottom: dotted; border-right: dotted; background-color: #c0c0c0; } 
+		@media print { 
+			header {display:none;} 
+			footer {display:none;} 
+			td { border-bottom: solid; border-right: solid; background-color: #c0c0c0; } 
+		}
+	</style>
+	<style media="print">
+		/*body {background-color:white;} (por si no tenemos quitado lo de imprimir gráficos de fondo en el navegador al imprimir)*/
+		h1 {color:black;}
+		h2 {color:red;}
+	</style>
+	</head>
+	<body>
+		<header>Este es el header</header>
+		<h1>Encabezado 1</h1>
+		<h2>Encabezado 2</h2>
+		<table>
+			<tr>
+				<td>Tabla</td>
+			</tr>
+		</table>
+		<footer>Este es el footer</footer>
+	</body>
+	</html>

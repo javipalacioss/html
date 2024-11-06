@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Datos Personales</title>
+</head>
+<body>
+
+  <!-- Encabezado -->
+
+  <!--Alumno: Javier Palacios Cano-->
+
+  <!-- Formulario Datos Personales -->
+   <form action="datos_personales.php" method="post">
+	<fieldset>
+	<legend><b><i>Datos Personales:</i></b></legend>
+	<label for="nombre"><b>Nombre:</b></label>
+  	<input type="text" id="nombre" name="nombre" required>
+	<br>
+	<br>
+  	<label for="apellidos"><b>Apellidos:</b></label>
+  	<input type="text" id="apellidos" name="apellidos" required>
+	
+	<br>
+	<br>
+	<label for="password"><b>Contraseña:</b></label>
+  	<input type="password" id="password" name="password" required>
+
+	<br>
+	<br>
+	<label for="estacion"><b>Estacion:</b></label>
+	<br>
+	<br>
+	<input type="radio" id="primavera" name="estacion" value="primavera">
+	<label for="primavera">Primavera</label>
+	<br>
+	<br>
+	<input type="radio" id="verano" name="estacion" value="verano">
+	<label for="verano">Verano</label><br>
+	<br>
+	<input type="radio" id="otonio" name="estacion" value="otonio">
+	<label for="otonio">Otoño</label><br>
+	<br>
+	<input type="radio" id="invierno" name="estacion" value="invierno">
+	<label for="invierno">Invierno</label>
+
+	<br>
+	<br>
+	<label for="transporte"><b>Medio de transporte:</b></label>
+	<select name="transporte" id="transporte" required>
+
+	<option disabled selected value=""></option>
+  	<option value="autobus">Autobus</option>
+  	<option value="bicicleta">Bicicleta</option>
+  	<option value="metro">Metro</option>
+  	<option value="moto">Moto</option>
+	<option value="patinete">Patinete</option>
+  	<option value="tren">Tren</option>
+
+	</select>
+
+	<br>
+	<br>
+	<label for="aficion"><b>Aficiones:</b></label>
+	<br>
+	<br>
+	<input type="checkbox" id="bailar" name="bailar" value="bailar">
+  	<label for="bailar">Bailar</label>
+	<br>
+  	<input type="checkbox" id="cantar" name="cantar" value="cantar">
+  	<label for="cantar">Cantar</label>
+	<br>
+  	<input type="checkbox" id="deporte" name="deporte" value="deporte">
+  	<label for="deporte">Hacer Deporte</label>
+	<br>
+	<input type="checkbox" id="leer" name="leer" value="leer">
+	<label for="leer">Leer</label>
+  	<br>
+	<input type="checkbox" id="series" name="series" value="series">
+	<label for="series">Ver Series</label>
+  	<br>
+	<input type="checkbox" id="viajar" name="viajar" value="viajar">
+	<label for="viajar">Viajar</label>
+  	<br>
+	<br>
+
+	<label for="observaciones"><b>Observaciones:</b></label>
+	<br>
+	<textarea id="observaciones" name="observaciones" rows="10" cols="35" required></textarea>
+
+	<br>
+	<br>
+	<input type="reset" id="borrar" name="borrar" value="Borrar campos">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" id="enviar" name="enviar" value="Enviar formulario">
+	</fieldset>
+   </form>
+
+</body>
+</html>

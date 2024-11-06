@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+       body{
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <form action="formulario.php" method="get">
+        <div id="divIzq">
+        <h1> Login </h1>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" size="25" required placeholder="Introduzca tu usuario..." min="3">
+
+        <br>
+        <br>
+
+        <label for="clave">Clave:</label>
+        <input type="password" id="password" size="25" required placeholder="Introduzca tu contraseña..." min="8">
+
+        <br>
+        <br>
+
+<!--checked para que salga seleccionado-->
+        <input type="radio" name="tipo" value="internet" required checked>
+        <b>Intranet</b>
+        <input type="radio" name="tipo" value="extranet" required checked>
+        <b>Extranet</b>
+
+        <br>
+
+        <!--si le ponemos disabled al fieldset se quedaria todo sin poder utilizar-->
+        <fieldset>
+
+            <legend>Matricula:</legend>
+
+        <h1>Asignaturas:</h1>
+
+        <label for="asignaturas">DIUW</label>
+        <input type="checkbox" name="asignaturas" value="diuw">
+        <br>
+        <label for="asignaturas">HLC</label>
+        <input type="checkbox" name="asignaturas" value="hlc">
+        <br>
+        <label for="asignaturas">FOL</label>
+        <input type="checkbox" name="asignaturas" value="fol">
+        <br>
+        <label for="asignaturas">DAW</label>
+        <input type="checkbox" name="empresa" value="daw">
+        <br>
+        <label for="asignaturas">DEWC</label>
+        <input type="checkbox" name="empresa" value="dewc">
+
+        </fieldset>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div id="divDer">
+        <label for="observaciones">
+            <h1>Observaciones:</h1>
+        <textarea name="comentario" maxlength="30" rows="10" cols="30"> </textarea>
+
+        <br>
+        <br>
+
+        <h1>Lista Asignaturas DAW1</h1>
+        <!--si ponemos size en en el select ponemos lista de 2, si ponemos size 3 de 3 etc-->
+        <!--si ponemos multiple se hace una lista para poder seleccionar mas de 1 como con size-->
+        <select name="DAW1" multiple>
+            <option value="0" disabled>Seleccione un elemento....</option>
+            <option value="1">Desarrollo aplicaciones web</option>
+            <option value="2">Desarrollo entorno web cliente</option>
+            <option value="3">Desarrollo entorno web Servidor</option>
+        </select>
+
+        <br>
+
+        <h1>Lista Asignaturas DAW2</h1>
+        <select>
+            <optgroup label="DAW2">
+                <option value="4">Base de datos</option>
+                <option value="5">Programacion</option>
+                <option value="6">Lenguaje de Marcas</option>
+            </optgroup>
+        </select>
+
+        <input type="reset" value="Reiniciar" name="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ">
+        <input type="submit" value="Enviar" name="">
+
+    </div>
+
+    </form>
+</body>
+</html>
