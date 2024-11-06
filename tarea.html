@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <style>
+        div#boton{
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="formulario.php" method="post" target="_blank">
+        <fieldset>
+        <table>
+            
+            <legend>Datos identificativos</legend>
+            <tr></tr>
+                <td>
+                        <label for="tipoDocumento"><b>* Tipo de identificación del alumno: </b></label>
+                        <br>
+                        <select name="tipoDocumento" id="tipoDocumento" required style="width: 858px;">
+                            <option value="dni">DNI</option>
+                            <option value="NIF">NIF</option>
+                            <option value="nie">NIE</option>
+                        </select>
+
+                </td>
+                <td>
+                    <label for="documento"><b>* Pasaporte/DNI:</b></label>
+                    <br>
+                    <input type="text" id="documento" name="documento" required>
+                </td>
+
+                <td>
+                    <label for="fechaAlta"><b>* Fecha Alta:</b></label>
+                    <br>
+                    <input type="date" id="fechaAlta" name="fechaAlta" required>
+                </td>
+
+            <tr></tr>
+                <td>
+                    <label for="nombre"><b>* Nombre:</b></label>
+                    <br>
+                    <input type="text" id="nombre" name="nombre" required size="50">
+                </td>
+
+                <td>
+                    <!--hay que ponerlo bien (tamaño)-->
+                    <label for="primerApellido"><b>* Primer Apellido:</b></label>
+                    <br>
+                    <input type="text" id="primerApellido" name="primerApellido" required size="50">
+                    
+                </td>
+
+                <td>
+                    <!--hay que ponerlo bien (tamaño)-->
+                    <label for="segundoApellido"><b>* Segundo Apellido:</b></label>
+                    <br>
+                    <input type="text" id="segundoApellido" name="segundoApellido" required size="50">
+                    
+                </td>
+
+            <tr></tr>
+                <td>
+                    <label for="nacionalidad"><b>* Nacionalidad: </b></label>
+                    <br>
+                    <input type="text" id="nacionalidad" name="nacionalidad" required style="width: 850px;">
+                </td>
+
+            <tr></tr>
+                <td>
+                    <label for="numSeguridadSocial"><b>* Número de la Seguridad Social: </b></label>
+                    <br>
+                    <input type="number" id="numSeguridadSocial" name="numSeguridadSocial" required style="width: 850px;">
+                </td>
+
+            <tr></tr>
+                <td>
+                    <label for="tlfAlumno"><b>* Número telefono alumno/a: </b></label>
+                    <br>
+                    <input type="number" id="tlfAlumno" name="tlfAlumno" required style="width: 850px;">
+                </td>
+
+            <tr></tr>
+                <td>
+                    <label for="correoAlumno"><b>* Correo Electronico del alumno: </b></label>
+                    <br>
+                    <input type="email" id="correoAlumno" name="correoAlumno" required style="width: 850px;">
+                </td>
+            
+       
+    </table>
+    </fieldset>
+    <fieldset>
+        <legend>Datos de Nacimiento</legend>
+
+    </fieldset>
+        <br>
+        <div id="boton">
+                    <input type="reset" value="Reiniciar" name="">
+                    <input type="submit" value="Enviar" name="">
+        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    </form>
+
+</body>
+</html>

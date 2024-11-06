@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <style>
+        div#boton {
+            text-align: center;
+        }
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="formulario.php" method="post" target="_blank">
+        <fieldset>
+            <legend style="color: royalblue;"><b>Datos identificativos</b></legend>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <label for="tipoDocumento"><b>* Tipo de identificación del alumno: </b></label>
+                        <br>
+                        <select name="tipoDocumento" id="tipoDocumento" required style="width: 248px;">
+                            <option value="dni">DNI</option>
+                            <option value="NIF">NIF</option>
+                            <option value="nie">NIE</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="documento"><b>* Pasaporte/DNI:</b></label>
+                        <br>
+                        <input type="text" id="dni_pasaporte" name="dni_pasaporte" required pattern="[A-Z]{3}[0-9]{6} | [0-9]{8}[A-Z]" style="width: 240px;">
+                    </td>
+                    <td>
+                        <label for="fechaAlta"><b>* Fecha Alta:</b></label>
+                        <br>
+                        <input type="date" id="fechaAlta" name="fechaAlta" required style="width: 243px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nombre"><b>* Nombre:</b></label>
+                        <br>
+                        <input type="text" id="nombre" name="nombre" required size="30">
+                    </td>
+                    <td>
+                        <label for="primerApellido"><b>* Primer Apellido:</b></label>
+                        <br>
+                        <input type="text" id="primerApellido" name="primerApellido" required size="30">
+                    </td>
+                    <td>
+                        <label for="segundoApellido"><b>* Segundo Apellido:</b></label>
+                        <br>
+                        <input type="text" id="segundoApellido" name="segundoApellido" required size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="nacionalidad"><b>* Nacionalidad: </b></label>
+                        <br>
+                        <input type="text" id="nacionalidad" name="nacionalidad" required style="width: 490px;">
+                    </td>
+                    <td>
+                        <label for="numSeguridadSocial"><b>* Número de la Seguridad Social: </b></label>
+                        <br>
+                        <input type="number" id="numSeguridadSocial" name="numSeguridadSocial" required style="width: 238px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="tlfAlumno"><b>* Número telefono alumno/a: </b></label>
+                        <br>
+                        <input type="number" id="tlfAlumno" name="tlfAlumno" required style="width: 490px;" pattern="[0-9]{9}">
+                    </td>
+                    <td>
+                        <label for="correoAlumno"><b>* Correo Electrónico del alumno: </b></label>
+                        <br>
+                        <input type="email" id="correoAlumno" name="correoAlumno" required style="width: 238px;">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <fieldset>
+            <legend style="color: royalblue;"><b>Datos de Nacimiento</b></legend>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <label for="fechaNacimiento"><b>* Fecha Nacimiento:</b></label>
+                        <br>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required style="width: 243px;">
+                    </td>
+                    <td>
+                        <label for="edad"><b>* Edad: </b></label>
+                        <br>
+                        <input type="text" id="edad" name="edad" required style="width: 236px;">
+                    </td>
+                    <td>
+                        <label for="sexo"><b>* Sexo: </b></label>
+                        <br>
+                        <input type="radio" id="sexoHombre" name="sexo" required value="hombre"><b> Hombre</b>
+                        <input type="radio" id="sexoMujer" name="sexo" required value="mujer"><b> Mujer</b>
+                    </td>
+                    <td>
+                        <label for="alumnoEmancipado"><b></b></label>
+                        <br>
+                        <input type="checkbox" id="alumnoEmancipado" name="alumnoEmancipado" required style="width:30px;"><b> ¿Alumno/a emancipado/a?</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pais"><b>* País: </b></label>
+                        <br>
+                        <select name="pais" id="pais" required style="width: 248px;">
+                            <option value="españa">España</option>
+                            <option value="inglaterra">Inglaterra</option>
+                            <option value="alemania">Alemania</option>
+                            <option value="francia">Francia</option>
+                            <option value="senegal">Senegal</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="provincia"><b>* Provincia: </b></label>
+                        <br>
+                        <select name="provincia" id="provincia" required style="width: 244px;">
+                            <option value="sevilla">Sevilla</option>
+                            <option value="frankfurt">Frankfurt</option>
+                            <option value="rennes">Rennes</option>
+                            <option value="londres">Londres</option>
+                            <option value="dakar">Dakar</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <label for="municipio"><b>* Municipio: </b></label>
+                        <br>
+                        <select name="municipio" id="municipio" required style="width: 250px;">
+                            <option value="sevilla">Sevilla</option>
+                            <option value="francfortDelMeno">Fráncfort del Meno</option>
+                            <option value="rennes">Rennes</option>
+                            <option value="richmond">Richmond</option>
+                            <option value="dakar">Dakar</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tipoVia"><b>* Tipo de vía: </b></label>
+                        <br>
+                        <select name="tipoVia" id="tipoVia" required style="width: 244px;">
+                            <option value="calle">Calle</option>
+                            <option value="avenida">Avenida</option>
+                            <option value="urbanizacion">Urbanización</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <label for="direccion"><b>* Dirección: </b></label>
+                        <br>
+                        <input type="text" id="direccion" name="direccion" required style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numero"><b>* Nº: </b></label>
+                        <br>
+                        <input type="text" id="numero" name="numero" required style="width: 50px;">
+                    </td>
+                    <td>
+                        <label for="escalera"><b>* Escalera: </b></label>
+                        <br>
+                        <input type="text" id="escalera" name="escalera" required style="width: 50px;">
+                    </td>
+                    <td>
+                        <label for="piso"><b>* Piso: </b></label>
+                        <br>
+                        <input type="text" id="piso" name="piso" required style="width: 50px;">
+                    </td>
+                    <td>
+                        <label for="letra"><b>* Letra: </b></label>
+                        <br>
+                        <input type="text" id="letra" name="letra" required style="width: 50px;">
+                    </td>
+                    <td>
+                        <label for="codigoPostal"><b>* C.P: </b></label>
+                        <br>
+                        <input type="text" id="codigoPostal" name="codigoPostal" required style="width: 50px;">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <br>
+        <div id="boton">
+            <input type="reset" value="Reiniciar">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
