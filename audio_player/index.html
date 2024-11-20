@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JukeBox</title>
+
+    <style>
+        table, td, th{
+            border-collapse: collapse;
+            border: 10px solid aqua;
+            text-align: center;
+            border-style: ridge;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    
+
+       
+    </style>
 </head>
 <body>
-    
+    <!--Tabla para repoductor-->
+    <table>
+        <tr>
+            <td>
+                <a href="cancion1.html" target="player">
+                    <img src="https://i.ytimg.com/vi/_PJvpq8uOZM/hqdefault.jpg" alt="imagen de miniatura de video">
+                </a>
+            </td>
+            <td>
+                <a href="cancion2.html" target="player">
+                    <img src="https://i.ytimg.com/vi/WAcnWtZjDWE/0.jpg" alt="imagen de miniatura de video">
+                </a>
+            </td> 
+            <td>
+                <a href="cancion3.html" target="player">
+                <img src="https://i.ytimg.com/vi/i9NgiuSPN_k/0.jpg" alt="imagen de miniatura de video">
+            </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td><h2>Bad Bunny - Monaco</h2></td>
+            <td><h2>Ozuna - Dile que tu me quieres</h2></td>
+            <td><h2>Anuel - Anuel y Emmanuel</h2></td>
+        </tr>
+
+        <tr>
+            <td>
+                <a href="cancion4.html" target="player">
+                    <img src="https://i.ytimg.com/vi/Y2cWHiKaFjc/0.jpg" alt="imagen de miniatura de video">
+                </a>
+            </td>
+            <td>
+                <a href="cancion5.html" target="player">
+                    <img src="https://i.ytimg.com/vi/_JZom_gVfuw/0.jpg" alt="imagen de miniatura de video">
+                </a>
+            </td> 
+            <td>
+                <a href="cancion6.html" target="player">
+                <img src="https://i.ytimg.com/vi/5SGuNOLPUCQ/0.jpg" alt="imagen de miniatura de video">
+            </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td><h2>2Pac - Do For Love</h2></td>
+            <td><h2>The Notorious B.I.G. - Juicy</h2></td>
+            <td><h2>Himno del mejor equipo de la historia</h2></td>
+        </tr>
+    </table>
+
+    <!--iframe con el reporductor de audio incrustado-->
+
+    <iframe src="intro.html" style="border: 0px;" width="100%" height="100px" name="player" id="player" style="width: 100%;"></iframe>
 </body>
 </html>
