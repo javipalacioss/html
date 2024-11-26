@@ -31,33 +31,24 @@
 
        
     </style>
-
-    <script>
-        function changeTrack(item){
-            var player = document.getElementById("player");
-            var track = "tracks/" + item.getElementByTagName("img")[0].getAttribute("data-track");
-            player.src = track;
-            player.play();
-        }
-    </script>
 </head>
 <body>
     <!--Tabla para repoductor-->
     <table>
         <tr>
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                    <img src="https://i.ytimg.com/vi/_PJvpq8uOZM/hqdefault.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion1.wav">
+                <a href="cancion1.html" target="player">
+                    <img src="https://i.ytimg.com/vi/_PJvpq8uOZM/hqdefault.jpg" alt="imagen de miniatura de video">
                 </a>
             </td>
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                    <img src="https://i.ytimg.com/vi/WAcnWtZjDWE/0.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion2.wav">
+                <a href="cancion2.html" target="player">
+                    <img src="https://i.ytimg.com/vi/WAcnWtZjDWE/0.jpg" alt="imagen de miniatura de video">
                 </a>
             </td> 
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                <img src="https://i.ytimg.com/vi/i9NgiuSPN_k/0.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion3.wav"> 
+                <a href="cancion3.html" target="player">
+                <img src="https://i.ytimg.com/vi/i9NgiuSPN_k/0.jpg" alt="imagen de miniatura de video">
             </a>
             </td>
         </tr>
@@ -70,18 +61,18 @@
 
         <tr>
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                    <img src="https://i.ytimg.com/vi/Y2cWHiKaFjc/0.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion4.wav">
+                <a href="cancion4.html" target="player">
+                    <img src="https://i.ytimg.com/vi/Y2cWHiKaFjc/0.jpg" alt="imagen de miniatura de video">
                 </a>
             </td>
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                    <img src="https://i.ytimg.com/vi/_JZom_gVfuw/0.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion5.wav">
+                <a href="cancion5.html" target="player">
+                    <img src="https://i.ytimg.com/vi/_JZom_gVfuw/0.jpg" alt="imagen de miniatura de video">
                 </a>
             </td> 
             <td>
-                <a href="#" onclick="changeTrack(this)">
-                <img src="https://i.ytimg.com/vi/5SGuNOLPUCQ/0.jpg" alt="imagen de miniatura de video" data-track="tracks/cancion6.wav">
+                <a href="cancion6.html" target="player">
+                <img src="https://i.ytimg.com/vi/5SGuNOLPUCQ/0.jpg" alt="imagen de miniatura de video">
             </a>
             </td>
         </tr>
@@ -95,9 +86,6 @@
 
     <!--iframe con el reporductor de audio incrustado-->
 
-    <audio name="player" controls autoplay style="width: 100%;">
-        <source src="tracks/intro.wav" type="audio/wav">
-        Tu navegador no es compatible para poder reproducir audio
-    </audio>
+    <iframe src="intro.html" style="border: 0px;" width="100%" height="100px" name="player" id="player" style="width: 100%;"></iframe>
 </body>
 </html>
