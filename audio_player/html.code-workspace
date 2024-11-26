@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../js(github)"
+		},
+		{
+			"path": "../../../../php"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html"
+	}
+}

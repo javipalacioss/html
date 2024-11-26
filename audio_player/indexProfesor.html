@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JukeBox</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 15px solid rgba(174, 126, 252, 0.712);
+            text-align: center;
+            border-spacing: 5px;
+        }
+        td {
+            border-radius: 50%;
+            text-align: center;
+            border: 10px solid rgba(51, 245, 235, 0.637);
+        }
+        img {
+            width: 300px;
+            border: 2px solid white  ;
+        }
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h2{
+            margin: 20px;
+        }
+    </style>
+    <script>
+        // Array de canciones, ahora con extensión .wav
+        let canciones = [
+            "Bad Bunny - Monaco.wav",
+            "Ozuna - Dile que tu me quieres.wav",
+            "Anuel - Anuel y Emmanuel.wav",
+            "2Pac - Do For Love.wav",
+            "The Notorious - Juicy.wav",
+            "Himno del mejor equipo de la historia.wav"
+        ];
+
+        function changeTrack(index) {
+            var player = document.getElementById("player");
+            // La ruta de la canción ahora usa .wav
+            var track = "tracks/" + canciones[index];
+            player.src = track;
+            player.play();
+        }
+
+        function init() {
+            const MAX_COLS = 3;
+            let fila;
+            let tabla = document.getElementById("catalogo");
+
+            if (canciones != null && canciones.length > 0) {
+                for (let i = 0; i < canciones.length; i++) {
+                    // Si el número de canciones es múltiplo de MAX_COLS, crea una nueva fila
+                    if (i % MAX_COLS == 0) {
+                        fila = document.createElement("tr");
+                        tabla.appendChild(fila);
+                    }
+                    let celda = document.createElement("td");
+                    celda.onclick = function() {
+                        changeTrack(i);
+                    };
+                    fila.appendChild(celda);
+
+                    let img = document.createElement("img");
+                    // El nombre del archivo sin la extensión .wav
+                    let fileName = canciones[i].split('.')[0];
+                    img.alt = fileName;
+                    img.src = "images/" + fileName + ".jpg"; // Asumiendo que las imágenes tienen el mismo nombre que las canciones
+                    celda.appendChild(img);
+
+                    let span = document.createElement("h2");
+                    span.innerHTML = fileName;
+                    celda.appendChild(span);
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <table id="catalogo" name="catalogo"></table>
+    <br />
+
+    <!-- Reproductor de audio -->
+    <audio id="player" name="player" controls="controls" autoplay="autoplay" style="width: 100%;">
+        <source src="tracks/intro.wav" type="audio/wav">
+        Tu navegador no soporta la etiqueta audio.
+    </audio>
+</body>
+</html>
