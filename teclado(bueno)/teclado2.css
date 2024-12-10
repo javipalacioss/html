@@ -1,0 +1,90 @@
+/* General Reset */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+#nota{
+    position: absolute;
+    font-size: 24px;
+    top: 210px;
+    left: 5px;
+    padding: 10px;
+}
+
+#instrumentoSelectorContainer{
+    position: absolute;
+    font-size: 24px;
+    top: 250px;
+    left: 5px;
+    padding: 10px;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    height: 200px;
+    margin: 5px;
+}
+
+/* Teclas blancas */
+.teclaBlanca {
+    width: 50px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    color: #000;
+    text-align: center;
+    font-weight: bolder;
+    line-height:350px;  /* Centra el texto dentro de la tecla */
+    cursor: pointer;
+}
+
+.teclaBlanca:hover {
+    color: black;
+    background-color: rgb(255, 255, 255) !important;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+/* Teclas negras */
+.teclaNegra {
+    width: 35px;
+    height: 120px;
+    background-color: black;
+    position: absolute; 
+    z-index: 2;
+    color: white;
+    font-weight: bolder;
+    top: 0; /* Ajustamos para que esté alineada con la parte superior de las teclas blancas */
+    left: 0; /* Inicialmente a la izquierda de la tecla blanca */
+    margin-left: -18px; /* Alineamos la tecla negra en el centro de la tecla blanca */
+    line-height: 200px; /* Centra el texto de la tecla negra */
+    cursor: pointer;
+}
+
+.teclaBlanca.clicked {
+    background-color: #ccc;
+}
+
+.teclaNegra.clicked {
+    background-color: #333;
+}
+
+.teclaBlanca:active, .teclaNegra:active {
+    background-color: #bbb;
+}
+
+/* Hover de teclas negras */
+.teclaNegra:hover {
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(255, 255, 255);
+}

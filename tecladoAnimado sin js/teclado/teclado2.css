@@ -30,18 +30,33 @@ body {
     line-height: 360px;
 }
 
+.teclaBlanca:hover{
+    color: black;
+    background-color: rgb(255, 255, 255) !important;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.teclaNegra:hover{
+    color: black;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(255, 255, 255);
+}
+
 .teclaNegra {
     width: 35px;
     height: 120px;
     background-color: black;
-    position: absolute;
-    z-index: 2;
+    position: absolute !important;
+    z-index: 2 !important; 
     color: white;
     text-align: center;
     font-weight: bolder;
     top: -1px;  /* Ubicamos las teclas negras un poco más arriba de las blancas */
     left: 50%;  /* Centrar la tecla negra sobre la tecla blanca */
-    margin-left: -40px; /* Desplazar la tecla negra para que esté centrada */
+    margin-left: -42px; /* Desplazar la tecla negra para que esté centrada */
     line-height: 200px;
 }
+
+
+
 

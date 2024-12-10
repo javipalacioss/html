@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+#nota{
+    width: 200px;
+    margin-left: -210px;
+    margin-top: 210px;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    height: 200px;
+    margin: 5px;
+}
+
+.teclaBlanca {
+    width: 50px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #000;
+    position: relative;
+    z-index: 1;
+    color: #000;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 360px;
+}
+
+.teclaBlanca:hover{
+    color: black;
+    background-color: rgb(255, 255, 255) !important;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.teclaNegra:hover{
+    color: black;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.teclaNegra {
+    width: 35px;
+    height: 120px;
+    background-color: black;
+    position: absolute !important;
+    z-index: 2 !important; 
+    color: white;
+    text-align: center;
+    font-weight: bolder !important; 
+    top: -1px;  /* Ubicamos las teclas negras un poco más arriba de las blancas */
+    left: 50% !important;  /* Centrar la tecla negra sobre la tecla blanca */
+    margin-left: -42px !important; /* Desplazar la tecla negra para que esté centrada */
+    line-height: 200px;
+}
+
+
+
+

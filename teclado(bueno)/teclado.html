@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano</title>
+    <link rel="stylesheet" href="teclado2.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
+    <script>
+        // "Array" de notas para la Magenta Music API
+        var NOTES = [
+          {
+            note: "C",
+            data: {
+              notes: [{ pitch: 60, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "C#",
+            data: {
+              notes: [{ pitch: 61, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "D",
+            data: {
+              notes: [{ pitch: 62, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "D#",
+            data: {
+              notes: [{ pitch: 63, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "E",
+            data: {
+              notes: [{ pitch: 64, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "F",
+            data: {
+              notes: [{ pitch: 65, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "F#",
+            data: {
+              notes: [{ pitch: 66, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "G",
+            data: {
+              notes: [{ pitch: 67, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "G#",
+            data: {
+              notes: [{ pitch: 68, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "A",
+            data: {
+              notes: [{ pitch: 69, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "A#",
+            data: {
+              notes: [{ pitch: 70, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+          {
+            note: "B",
+            data: {
+              notes: [{ pitch: 71, startTime: 0.0, endTime: 0.5 }],
+              totalTime: 0.5,
+            },
+          },
+        ];
+  
+        // Array de equivalencia entre notas musicales y teclas del piano
+        var notas = {
+          C: "DO",
+          "C#": "DO Sostenido",
+          D: "RE",
+          "D#": "RE Sostenido",
+          E: "MI",
+          F: "FA",
+          "F#": "FA Sostenido",
+          G: "SOL",
+          "G#": "SOL Sostenido",
+          A: "LA",
+          "A#": "LA Sostenido",
+          B: "SI",
+        };
+  
+        // Mapeo de teclas del teclado a notas del piano
+        var KeyMap = {
+          A: "C",
+          S: "D",
+          D: "E",
+          F: "F",
+          G: "G",
+          H: "A",
+          J: "B",
+          W: "C#",
+          E: "D#",
+          T: "F#",
+          Y: "G#",
+          U: "A#",
+        };
+  
+        // Inicialización del reproductor de Magenta Music
+        var player = new mm.Player();
+  
+        // Función para reproducir la nota cuando se hace clic en una tecla del piano
+        function play(noteElement) {
+          let note = noteElement.getAttribute("data-note");
+  
+          // Mostrar la nota en español en el HTML
+          document.getElementById("nota").innerHTML =
+            noteElement.getAttribute("data-note") + " -> " + notas[note];
+  
+          // Buscar la nota en el array NOTES y reproducirla usando Magenta Music
+          let noteData = NOTES.find((n) => n.note === note).data;
+          player.stop();
+          player.start(noteData);
+  
+          // Cambiar el color de la tecla al hacer clic
+          noteElement.classList.remove("hover");
+          noteElement.classList.add("clicked");
+          setTimeout(function () {
+            noteElement.classList.remove("clicked");
+          }, 1000);
+        }
+  
+        // Reproducir la nota cuando se presiona una tecla del teclado
+        document.addEventListener("keydown", function (event) {
+          let key = event.key.toUpperCase();
+  
+          // Si la tecla presionada está en el mapeo de teclas, reproducir la nota
+          let note = KeyMap[key];
+          if (note) {
+            let noteData = NOTES.find((n) => n.note === note).data;
+            player.stop();
+            player.start(noteData);
+  
+            // Mostrar la nota correspondiente en el div
+            document.getElementById("nota").innerHTML =
+              note + " -> " + notas[note];
+          }
+        });
+
+        function changeInstrument(instrumentSelector) {
+            let instrument = parseInt(instrumentSelector.options[instrumentSelector.selectedIndex].value);
+            player.stop();
+            NOTES.forEach(n => n.data.notes.forEach(o => o.program = instrument));
+            player = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
+            // for each note, change the instrument
+            //soundFontMelodies[1].notes.forEach(n => n.program = instrument);            
+        }
+
+      </script>
+    <!-- Magenta Music API -->
+  </head>
+  <body>
+    <div class="piano">
+      <!-- Teclas blancas -->
+      <div class="teclaBlanca" data-note="C" onclick="play(this)">C</div>
+      <div class="teclaBlanca" data-note="D" onclick="play(this)">
+        D
+        <div class="teclaNegra" data-note="C#" onclick="play(this)">C#</div>
+      </div>
+      <div class="teclaBlanca" data-note="E" onclick="play(this)">
+        E
+        <div class="teclaNegra" data-note="D#" onclick="play(this)">D#</div>
+      </div>
+      <div class="teclaBlanca" data-note="F" onclick="play(this)">F</div>
+      <div class="teclaBlanca" data-note="G" onclick="play(this)">
+        G
+        <div class="teclaNegra" data-note="F#" onclick="play(this)">F#</div>
+      </div>
+      <div class="teclaBlanca" data-note="A" onclick="play(this)">
+        A
+        <div class="teclaNegra" data-note="G#" onclick="play(this)">G#</div>
+      </div>
+      <div class="teclaBlanca" data-note="B" onclick="play(this)">
+        B
+        <div class="teclaNegra" data-note="A#" onclick="play(this)">A#</div>
+      </div>
+    </div>
+    <h1><div id="nota"></div></h1>
+
+    <div id="instrumentoSelectorContainer" name="instrumentoSelectorContainer">
+      <select
+        name="instrumentSelector"
+        id="instrumentSelector"
+        onchange="changeInstrument(this)">
+    
+        <option value="1">acoustic grand piano</option>
+        <option value="2">bright acoustic piano</option>
+        <option value="3">electric grand piano</option>
+        <option value="4">honkytonk piano</option>
+        <option value="5">electric piano 1</option>
+        <option value="6">electric piano 2</option>
+        <option value="7">harpsichord</option>
+        <option value="8 ">clavichord</option>
+        <option value="9 ">celesta</option>
+        <option value="10 ">glockenspiel</option>
+        <option value="11 ">music box</option>
+        <option value="12 ">vibraphone</option>
+        <option value="13 ">marimba</option>
+        <option value="14 ">xylophone</option>
+        <option value="15 ">tubular bells</option>
+        <option value="16 ">dulcimer</option>
+        <option value="17 ">drawbar organ</option>
+        <option value="18 ">percussive organ</option>
+        <option value="19 ">rock organ</option>
+        <option value="20 ">church organ</option>
+        <option value="21 ">reed organ</option>
+        <option value="22 ">accordion</option>
+        <option value="23 ">harmonica</option>
+        <option value="24 ">tango accordion</option>
+        <option value="25 ">acoustic guitar nylon</option>
+        <option value="26 ">acoustic guitar steel</option>
+        <option value="27 ">electric guitar jazz</option>
+        <option value="28 ">electric guitar clean</option>
+        <option value="29 ">electric guitar muted</option>
+        <option value="30 ">overdriven guitar</option>
+        <option value="31 ">distortion guitar</option>
+        <option value="32 ">guitar harmonics</option>
+        <option value="33 ">acoustic bass</option>
+        <option value="34 ">electric bass finger</option>
+        <option value="35 ">electric bass pick</option>
+        <option value="36 ">fretless bass</option>
+        <option value="37 ">slap bass 1</option>
+        <option value="38 ">slap bass 2</option>
+        <option value="39 ">synth bass 1</option>
+        <option value="40 ">synth bass 2</option>
+        <option value="41 ">violin</option>
+        <option value="42 ">viola</option>
+        <option value="43 ">cello</option>
+        <option value="44 ">contrabass</option>
+        <option value="45 ">tremolo strings</option>
+        <option value="46 ">pizzicato strings</option>
+        <option value="47 ">orchestral harp</option>
+        <option value="48 ">timpani</option>
+        <option value="49 ">string ensemble 1</option>
+        <option value="50 ">string ensemble 2</option>
+        <option value="51 ">synthstrings 1</option>
+        <option value="52 ">synthstrings 2</option>
+        <option value="53 ">choir aahs</option>
+        <option value="54 ">voice oohs</option>
+        <option value="55 ">synth voice</option>
+        <option value="56 ">orchestra hit</option>
+        <option value="57 ">trumpet</option>
+        <option value="58 ">trombone</option>
+        <option value="59 ">tuba</option>
+        <option value="60 ">muted trumpet</option>
+        <option value="61 ">french horn</option>
+        <option value="62 ">brass section</option>
+        <option value="63 ">synthbrass 1</option>
+        <option value="64 ">synthbrass 2</option>
+        <option value="65 ">soprano sax</option>
+        <option value="66 ">alto sax</option>
+        <option value="67 ">tenor sax</option>
+        <option value="68 ">baritone sax</option>
+        <option value="69 ">oboe</option>
+        <option value="70 ">english horn</option>
+        <option value="71 ">bassoon</option>
+        <option value="72 ">clarinet</option>
+        <option value="73 ">piccolo</option>
+        <option value="74 ">flute</option>
+        <option value="75 ">recorder</option>
+        <option value="76 ">pan flute</option>
+        <option value="77 ">blown bottle</option>
+        <option value="78 ">shakuhachi</option>
+        <option value="79 ">whistle</option>
+        <option value="80 ">ocarina</option>
+        <option value="81 ">lead 1 square</option>
+        <option value="82 ">lead 2 sawtooth</option>
+        <option value="83 ">lead 3 calliope</option>
+        <option value="84 ">lead 4 chiff</option>
+        <option value="85 ">lead 5 charang</option>
+        <option value="86 ">lead 6 voice</option>
+        <option value="87 ">lead 7 fifths</option>
+        <option value="88 ">lead 8 bass lead</option>
+        <option value="89 ">pad 1 new age</option>
+        <option value="90 ">pad 2 warm</option>
+        <option value="91 ">pad 3 polysynth</option>
+        <option value="92 ">pad 4 choir</option>
+        <option value="93 ">pad 5 bowed</option>
+        <option value="94 ">pad 6 metallic</option>
+        <option value="95 ">pad 7 halo</option>
+        <option value="96 ">pad 8 sweep</option>
+        <option value="97 ">fx 1 rain</option>
+        <option value="98 ">fx 2 soundtrack</option>
+        <option value="99 ">fx 3 crystal</option>
+        <option value="100 ">fx 4 atmosphere</option>
+        <option value="101 ">fx 5 brightness</option>
+        <option value="102 ">fx 6 goblins</option>
+        <option value="103 ">fx 7 echoes</option>
+        <option value="104 ">fx 8 scifi</option>
+        <option value="105 ">sitar</option>
+        <option value="106 ">banjo</option>
+        <option value="107 ">shamisen</option>
+        <option value="108 ">koto</option>
+        <option value="109 ">kalimba</option>
+        <option value="110 ">bag pipe</option>
+        <option value="111 ">fiddle</option>
+        <option value="112 ">shanai</option>
+        <option value="113 ">tinkle bell</option>
+        <option value="114 ">agogo</option>
+        <option value="115 ">steel drums</option>
+        <option value="116 ">woodblock</option>
+        <option value="117 ">taiko drum</option>
+        <option value="118 ">melodic tom</option>
+        <option value="119 ">synth drum</option>
+        <option value="120 ">reverse cymbal</option>
+        <option value="121 ">guitar fret noise</option>
+        <option value="122 ">breath noise</option>
+        <option value="123 ">seashore</option>
+        <option value="124 ">bird tweet</option>
+        <option value="125 ">telephone ring</option>
+        <option value="126 ">helicopter</option>
+        <option value="127 ">applause</option>
+        <option value="128 ">gunshot</option>
+      </select>
+    </div>
+
+
+
+  </body>
+</html>

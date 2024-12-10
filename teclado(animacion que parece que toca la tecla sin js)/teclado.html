@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="teclado2.css">
+    <script>
+        // Array de equivalencia entre notas musicales y teclas del piano
+        var notas = {
+            "C": "DO",
+            "C#": "DO Sostenido",
+            "D": "RE",
+            "D#": "RE Sostenido",
+            "E": "MI",
+            "F": "FA",
+            "F#": "FA Sostenido",
+            "G": "SOL",
+            "G#": "SOL Sostenido",
+            "A": "LA",
+            "A#": "LA Sostenido",
+            "B": "SI"
+        };
+
+
+        function play(noteElement) {
+
+           // Set the note english name and spanish name
+            document.getElementById("nota").innerHTML = 
+                noteElement.getAttribute("data-note") + " -> " + 
+                notas[noteElement.getAttribute("data-note")];
+            // Change the color of the key (during 1 second)
+                noteElement.classList.remove("hover");
+                noteElement.classList.add("clicked");
+                setTimeout(function(){
+                    noteElement.classList.remove("clicked");
+        }, 1000);
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="piano">
+        <!-- Teclas blancas -->
+        <div class="teclaBlanca" data-note="C" onclick="play(this)">C</div>
+        <div class="teclaBlanca" data-note="D" onclick="play(this)">
+            D
+            <div class="teclaNegra">C#</div>
+        </div>
+        <div class="teclaBlanca">
+            E
+            <div class="teclaNegra">D#</div>
+        </div>
+        <div class="teclaBlanca">F</div>
+        <div class="teclaBlanca" >
+            G
+            <div class="teclaNegra">F#</div>
+        </div>
+        <div class="teclaBlanca">
+            A
+            <div class="teclaNegra">G#</div>
+        </div>
+        <div class="teclaBlanca">
+            B
+            <div class="teclaNegra">A#</div>
+        </div>
+
+
+             
+    </div>
+    <h1><div id="nota"></div></h1> 
+</body>
+</html>
