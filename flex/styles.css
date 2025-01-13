@@ -1,10 +1,24 @@
 .container{
     /* */
     display: flex;
-    width: 900px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: stretch;
+    align-content: content;
+    gap: 60px 40px;
+
+    width: 440px;
+    height: 440px;
     border: 1px solid black;
 }
 
 .btn{
     width: 200px;
+    height: 80px;
+}
+
+.btn2{
+    width: 200px;
+    height: 80px;
 }
