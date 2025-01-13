@@ -13,10 +13,8 @@
 			"path": "../../../../js(github)"
 		},
 		{
-			"path": "../../../../php"
-		},
-		{
-			"path": "../../../../php(local)"
+			"name": "php",
+			"path": "../../../../php(github)/php"
 		}
 	],
 	"settings": {
