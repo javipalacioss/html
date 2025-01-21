@@ -1,0 +1,27 @@
+.esquina {
+    position: absolute;
+    width: 150px; 
+    height: 100px; 
+    z-index: 10; 
+}
+.superior-izquierda {
+    top: 0;
+    left: 0;
+}
+.superior-derecha {
+    top: 0;
+    right: 0;
+}
+.inferior-izquierda {
+    bottom: 0;
+    left: 0;
+}
+.inferior-derecha {
+    bottom: 0;
+    right: 0;
+}
+.contenido {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+}

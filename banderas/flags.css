@@ -1,0 +1,37 @@
+img {
+    width: 100px;
+    display: block;
+    border: 1px solid black;    
+}
+
+.fila01 {
+    float: right;
+}
+
+.fila02 {
+    float: left;
+}
+
+.fila0301 {
+    position: top;
+    top: 0px;
+    left: 0px;
+}
+
+.fila0302 {
+    position: relative;
+    top: -30px;
+    left: 30px;
+}
+
+.fila0303 {
+    position: relative;
+    top: -60px;
+    left: 60px;
+}
+
+.fila0304 {
+    position: relative;
+    top: -90px;
+    left: 90px;
+}
