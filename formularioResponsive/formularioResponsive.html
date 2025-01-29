@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Adaptativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        .formulario {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 8px;
+        }
+
+        .formulario form .campo label {
+            margin-bottom: 5px;
+        }
+
+        .formulario form input,
+        .formulario form select,
+        .formulario form textarea,
+        .formulario form button {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .avatar-preview {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            margin: 10px auto;
+        }
+
+        .avatar-preview img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .formulario form button {
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+        }
+
+        .formulario form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="wwf.png" alt="Logo">
+            <h1>Formulario Adaptativo</h1>
+        </div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Formulario</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="formulario">
+        <form>
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="campo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="campo">
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+            <div class="campo">
+                <label for="pais">País</label>
+                <select id="pais" name="pais">
+                    <option value="">Seleccione un país</option>
+                    <option value="es">España</option>
+                    <option value="mx">México</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="foto">Fotografía</label>
+                <div class="avatar-preview">
+                    <img src="image.jpg" alt="Avatar predeterminado">
+                </div>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div class="campo">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena">
+            </div>
+            <div class="campo">
+                <label for="cv">Cargar CV</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="campo">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
