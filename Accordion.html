@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acordeón en HTML y CSS</title>
+    <script>
+      function toggleElements(){
+        var accItem = element.parentNode;
+        if(accItem.className == "accItem"){
+          accItem.className == "accItem accItemOpen";
+        } else {
+          accItem = "accItem";
+        }
+      }
+    </script>
+    <style>
+      .accContenido {
+        border: 1px solid black;
+        display: none;
+      }
+
+      .accCabecera {
+        text-decoration: none;
+        display: block;
+      }
+
+      .accCabecera:hover {
+        background-color: yellow;
+      }
+
+      div{
+        border: 1px solid black;
+      }
+
+      
+      .accItem:hover > .accContenido {
+        display: inherit;
+      }
+
+      
+
+      .div:not(.accItem){
+        border: 0px solid black;
+      }
+
+      .accItem > .accContenido {
+
+        display: inherit;
+        
+      }
+
+  
+
+      
+    </style>
+
+    <h1>Accordion</h1>
+
+    <div class="accItem">
+      <a href="#" class="accCabecera" onclick="toggleSelected(this)">Cabecera 1</a>
+      <div class="accContenido">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officiis
+          fugiat laudantium voluptatum repellat dolorem ipsam libero. Reiciendis
+          deleniti fugit alias dignissimos exercitationem libero recusandae
+          minus nihil animi. Nihil, facere!
+        </p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="accItem">
+      <a href="#" class="accCabecera" onclick="toggleSelected(this)">Cabecera 1</a>
+      <div class="accContenido">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officiis
+          fugiat laudantium voluptatum repellat dolorem ipsam libero. Reiciendis
+          deleniti fugit alias dignissimos exercitationem libero recusandae
+          minus nihil animi. Nihil, facere!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+a{
+    color: aqua;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+    background-color: yellow;
+}
+
+a:visited{
+color: rgb(255, 0, 221);
+}
+
+a:link{
+    color: chartreuse;
+}
+
+a:active{
+color: rgb(66, 0, 66);
+background-color: rgb(0, 119, 255);
+}
+
+input:hover{
+    text-decoration: underline;
+    background-color: yellow;
+}

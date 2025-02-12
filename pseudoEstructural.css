@@ -1,0 +1,29 @@
+li{
+    color: blue;
+}
+li:first-child{
+    color: red;
+}
+li:hover{
+    color: aqua;
+}
+
+body>ul:first-child{
+    color: purple;
+}
+
+html body > :first-child{
+    color: orange
+}
+ul{
+    background-color:teal
+}
+
+ul:first-of-type{
+background-color: red;
+}
+
+li:nth-child(odd){
+    color: springgreen;
+    background-color: darkslateblue;
+}

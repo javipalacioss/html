@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+      function toggleElements() {
+        var accItem = event.target.parentNode; /* Captura el elemento padre */
+        if (accItem.className === "accItem") {
+          accItem.className = "accItem accItemOpen"; /* Agrega la clase para abrir */
+        } else {
+          accItem.className = "accItem"; /* Vuelve a la clase original */
+        }
+      }
+    </script>
+
+    
+
+    
+
+</head>
+<body>
+
+    <br>
+    <div class="accordion">
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements()">Primera Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="torredeloro.jpg" alt="Foto de la torre del oro con un atardecer" class="imagenes">
+                <p>Aqui podemos observar una de las maravillas de <b>Sevilla</b>, la cual fue construida en 1220 por el gobernador <b>Abù l-Ulà</b>,
+                    formaba parte del sistema defensivo de la ciudad, junto con la muralla que la conectaba con la Torre de la Plata.
+                    Con 36 metros de altura y una estructura de tres cuerpos,  <b>la Torre del Oro</b> es uno de los símbolos más representativos de la ciudad y un atractivo turístico destacado.
+                </p>
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements()">Segunda Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="estadiosfc.jpg" alt="Foto del mejor estadio del mejor equipo del mundo" class="imagenes">
+                <p>El <b>Estadio Ramón Sánchez-Pizjuán</b> es el estadio del <b>Sevilla Fútbol Club</b>, ubicado en Sevilla, España.
+                    Inaugurado en <b>1958</b>, tiene una capacidad aproximada de <b>43,000 espectadores</b>.  Es conocido por su atmósfera vibrante y ha sido sede de importantes eventos, 
+                    como partidos de la selección española y la <b>final de la Copa de Europa de 1986</b>.  Su icónica fachada y el mosaico de la entrada principal lo convierten en un símbolo del sevillismo.
+                </p>
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements()">Tercera Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="plazatoros.jpg" alt="Foto aerea de la plaza de toros de sevilla" class="imagenes">
+                <p>La <b>Plaza de Toros de la Maestranza</b> es una de las plazas taurinas más emblemáticas de <b>Sevilla, España</b>.  
+                    Construida en el <b>siglo XVIII</b>, destaca por su arquitectura barroca y su icónica fachada blanca y amarilla.  
+                    Es sede de la prestigiosa <b>Feria de Abril</b> y ha acogido a las más grandes figuras del toreo.  
+                    Además, alberga el <b>Museo Taurino</b>, donde se exhiben trajes, carteles y otros elementos históricos de la tauromaquia.</p>                 
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements()">Acciones del Acordeón
+                <img src="flechaabajo.png" class="flechaAbajo">     
+            </a>
+            <div class="accContenido">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dicta repudiandae nihil porro quia aspernatur, dolorem harum eligendi et vero cum consequatur nostrum quod laboriosam. Laboriosam, ducimus! Doloremque, recusandae ipsa?</p>
+                <div class="botones">
+                    <button>CANCEL</button>
+                    <button>AGREE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
