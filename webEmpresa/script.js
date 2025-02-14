@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const articles = document.querySelectorAll("article");
     const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+
     let lastScrollTop = 0;
 
     // Efectos avanzados en los artículos al pasar el mouse
@@ -17,19 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Efecto de header al hacer scroll con opacidad y cambio de fondo dinámico
-    window.addEventListener("scroll", () => {
-        let scrollTop = window.scrollY;
-        if (scrollTop > lastScrollTop) {
-            header.style.background = "rgba(20, 20, 20, 0.9)";
-            header.style.boxShadow = "0px 5px 15px rgba(0, 0, 0, 0.5)";
-            header.style.transition = "background 0.3s ease-in-out, box-shadow 0.3s ease-in-out";
-        } else {
-            header.style.background = "rgba(30, 30, 30, 1)";
-            header.style.boxShadow = "none";
-        }
-        lastScrollTop = scrollTop;
-    });
+   
 
     // Animaciones suaves al hacer scroll usando IntersectionObserver
     const sections = document.querySelectorAll("section");
@@ -83,13 +73,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const colors = [
         "linear-gradient(to right, #4facfe, #00f2fe)",
         "linear-gradient(to right, #43e97b, #38f9d7)",
+        "linear-gradient(to right,rgb(255, 0, 234),rgb(95, 98, 255))",
         "linear-gradient(to right, #fa709a, #fee140)",
         "linear-gradient(to right, #30cfd0, #330867)",
-        "linear-gradient(to right,rgb(0, 102, 255),rgb(1, 243, 191))"
+        "linear-gradient(to right,rgb(255, 0, 0),rgb(255, 65, 122))"
+    ];
+
+    const colors2 = [
+        "linear-gradient(to right,rgb(255, 0, 0),rgb(255, 65, 122))",
+        "linear-gradient(to right, #30cfd0, #330867)",
+        "linear-gradient(to right, #fa709a, #fee140)",
+        "linear-gradient(to right,rgb(255, 0, 234),rgb(95, 98, 255))",
+        "linear-gradient(to right, #43e97b, #38f9d7)",
+        "linear-gradient(to right, #4facfe, #00f2fe)"
     ];
     let colorIndex = 0;
     setInterval(() => {
         document.body.style.background = colors[colorIndex];
+        header.style.background = colors2[colorIndex];
+        footer.style.background = colors2[colorIndex];
         colorIndex = (colorIndex + 1) % colors.length;
     }, 10000);
 

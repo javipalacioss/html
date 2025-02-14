@@ -149,7 +149,7 @@ button:hover {
 
 /* Pie de Página */
 footer {
-    background: #0e6eb8;
+    background: linear-gradient(90deg, #0e6eb8, #44a1f2);
     padding: 15px;
     text-align: center;
     color: #ffffff;
@@ -214,4 +214,8 @@ article {
 .imagen-centrada {
     display: block;
     margin: 0 auto;
+}
+
+.link{
+    text-decoration: none;
 }
