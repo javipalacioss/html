@@ -1,0 +1,10 @@
+.accContent {
+  border: 2px solid #ccc;
+  background-color: antiquewhite;
+  display: none;
+}
+
+.accContent:target {
+  display: block;
+}
+

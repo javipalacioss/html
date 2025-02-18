@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Tabla básica sin estilo</title>
+        <style>
+            table { 
+                border: medium solid blue; 
+                border-spacing:0;                
+            }
+            th, td { border: 1px solid blue;  }
+            thead { background-color: gray; }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>Tabla 01</caption>
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Asignatura</th>
+                    <th>Aula</th>
+                    <th>Alumn@s matriculad@s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>
+                        <table style="width: 100%; border: none;">
+                            <tr>
+                                <td>1.1</td>
+                                <td>1.2</td>
+                            </tr>
+                            <tr>
+                                <td>2.1</td>
+                                <td>2.2</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td rowspan="2">R11</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>Diseño de Interfaces Web</td>
+                    <!-- <td>R11</td> -->
+                    <td>20</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>                    
+                    <td colspan="3" style="text-align: right;">Total de alum@s:</td>                    
+                    <td>47</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br/><br/><br/>
+        <table style="border-collapse: collapse">
+            <caption>Tabla 02 (con collapse y columnas alternas)</caption>
+            <colgroup>
+                <col style="background-color: aqua;" />
+                <col style="background-color: beige" />
+                <col style="background-color: aqua;" />
+                <col style="background-color: beige" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th id="cabCurso">Curso</th>
+                    <th id="cabAsignatura">Asignatura</th>
+                    <th id="cabAula">Aula</th>
+                    <th id="cabAlumn">Alumn@s matriculad@s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td headers="cabCurso">1º</td>
+                    <td headers="cabAsignatura">Sistemas Informáticos</td>
+                    <td>R11</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>Diseño de Interfaces Web</td>
+                    <td>R11</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Todas</td>
+                    <td></td>
+                    <td>47</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br/><br/><br/>
+        <table style="border-collapse: collapse">
+            <caption>Tabla 03 (colores)</caption>                        
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>            
+        </table>
+    </body>
+</html>

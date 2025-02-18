@@ -1,0 +1,63 @@
+input:focus {
+  background-color: aqua;
+}
+
+/* Estilo para cuando un elemento dentro del formulario recibe el foco */
+:focus-within {
+  background-color: lightyellow;
+}
+
+input:valid {
+  border-color: lime;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:in-range {
+  background-color: yellow;
+}
+
+input:out-of-range {
+  background-color: rebeccapurple;
+}
+
+input:indeterminate {
+  box-shadow: 0 0 5px 3px palevioletred;
+}
+
+input:indeterminate + span {
+  color: palevioletred;
+}
+
+input:checked {
+  box-shadow: 0 0 5px 3px fuchsia;
+  accent-color: rgb(255, 238, 0);
+}
+
+input:checked + span {
+  color: fuchsia;
+}
+
+input,
+button {
+  background-color: lightpink;
+}
+
+button:hover {
+  color: fuchsia;
+  background-color: springgreen;
+}
+
+:disabled{
+    background-color: lightgreen;
+}
+
+input:enabled{
+    color: rgb(0, 24, 158);
+}
+
+input:default{
+    box-shadow: 0 0 5px 3px orange;
+}
