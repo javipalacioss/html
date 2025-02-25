@@ -1,0 +1,8 @@
+a::before{
+    content: "[ Enlace ] => ";
+}
+
+a::after{
+    content: " -> (" attr(href) ")";
+}
+

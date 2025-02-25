@@ -1,0 +1,17 @@
+body{
+    counter-reset: contador; 
+}
+
+h1{
+    counter-reset: contador2;
+}
+
+h1::before{
+    counter-increment: contador; 
+    content: counter(contador) ".- "; 
+} 
+
+h2::before{
+    counter-increment: contador2; 
+    content: counter(contador) "." counter(contador2) ".- ";
+}

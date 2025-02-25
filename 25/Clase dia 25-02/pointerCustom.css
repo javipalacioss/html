@@ -1,0 +1,18 @@
+div{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: calc(100% - 200px);
+    background-color: aquamarine;
+}
+
+.div_pointer{
+    cursor: url('icons8-hombre-pixel-30.png'), auto;
+    margin-bottom: 40px;
+}
+
+.columns{
+    /* column-count: 3; */
+    column-width: 100px;
+    column-rule: 4px solid red;
+    column-span: none;
+}

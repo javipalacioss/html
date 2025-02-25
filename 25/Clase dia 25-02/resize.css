@@ -1,0 +1,23 @@
+div{
+    border: 1px solid black;
+    background-color: aquamarine;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    resize: both;
+}
+
+.resizable{
+    resize: both;
+    overflow: auto;
+    width: 400px;
+    height: 400px;
+}
+
+.default{
+    resize: vertical;
+}
+
+.fix{
+    resize: none;
+}
