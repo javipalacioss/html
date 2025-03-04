@@ -4,107 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acordeón</title>
-
+    <link rel="stylesheet" href="accordion.css">
     <script>
         function toggleElements(element) {
             var accItem = element.parentNode; 
             accItem.classList.toggle("accItemOpen");
         }
 
-        document.getElementById("flechaAbajo").addEventListener("click", function() {
-            this.classList.toggle("flecha");
-        });
     </script>
 
-    <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-    padding: 20px;
-}
-
-.accordion {
-    max-width: 600px;
-    margin: auto;
-}
-
-.accItem {
-    background: lightcyan;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px grey;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-.accCabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    background: white;
-    border-bottom: 1px solid lightgray;
-    text-decoration: none;
-    color: black;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.accCabecera:hover {
-    background-color: lightcyan;
-}
-
-.accContenido {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    background: white;
-    transition: max-height 2s ease-in-out, padding 2s ease-in-out;
-}
-
-.accItemOpen .accContenido {
-    max-height: 500px; 
-    padding: 15px;
-}
-
-.botones {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.botones button {
-    border: none;
-    background: none;
-    color: dodgerblue;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-.botones button:hover {
-    text-decoration: underline;
-    background-color: yellow;
-}
-
-.imagenes {
-    height: 300px;
-    width: 550px;
-    display: block;
-    margin: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px grey;
-}
-
-.flechaAbajo {
-    height: 37px;
-    width: 37px;
-    margin-right: 1px;
-}
-
-    </style>
-
+  
 </head>
 <body>
 
