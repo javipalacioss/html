@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón</title>
+
+    <script>
+        function toggleElements(element) {
+            var accItem = element.parentNode; 
+            accItem.classList.toggle("accItemOpen");
+        }
+
+        document.getElementById("flechaAbajo").addEventListener("click", function() {
+            this.classList.toggle("flecha");
+        });
+    </script>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.accordion {
+    max-width: 600px;
+    margin: auto;
+}
+
+.accItem {
+    background: lightcyan;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accCabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    border-bottom: 1px solid lightgray;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.accCabecera:hover {
+    background-color: lightcyan;
+}
+
+.accContenido {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background: white;
+    transition: max-height 2s ease-in-out, padding 2s ease-in-out;
+}
+
+.accItemOpen .accContenido {
+    max-height: 500px; 
+    padding: 15px;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.botones button {
+    border: none;
+    background: none;
+    color: dodgerblue;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.botones button:hover {
+    text-decoration: underline;
+    background-color: yellow;
+}
+
+.imagenes {
+    height: 300px;
+    width: 550px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+}
+
+.flechaAbajo {
+    height: 37px;
+    width: 37px;
+    margin-right: 1px;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <br>
+    <div class="accordion">
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements(this)">Primera Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="torredeloro.jpg" alt="Foto de la torre del oro con un atardecer" class="imagenes">
+                <p>Aqui podemos observar una de las maravillas de <b>Sevilla</b>, la cual fue construida en 1220 por el gobernador <b>Abù l-Ulà</b>,
+                    formaba parte del sistema defensivo de la ciudad, junto con la muralla que la conectaba con la Torre de la Plata.
+                    Con 36 metros de altura y una estructura de tres cuerpos,  <b>la Torre del Oro</b> es uno de los símbolos más representativos de la ciudad y un atractivo turístico destacado.
+                </p>
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements(this)">Segunda Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="estadiosfc.jpg" alt="Foto del mejor estadio del mejor equipo del mundo" class="imagenes">
+                <p>El <b>Estadio Ramón Sánchez-Pizjuán</b> es el estadio del <b>Sevilla Fútbol Club</b>, ubicado en Sevilla, España.
+                    Inaugurado en <b>1958</b>, tiene una capacidad aproximada de <b>43,000 espectadores</b>.  Es conocido por su atmósfera vibrante y ha sido sede de importantes eventos, 
+                    como partidos de la selección española y la <b>final de la Copa de Europa de 1986</b>.  Su icónica fachada y el mosaico de la entrada principal lo convierten en un símbolo del sevillismo.
+                </p>
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements(this)">Tercera Maravilla de Sevilla
+                <img src="flechaabajo.png" class="flechaAbajo">
+            </a>
+            <div class="accContenido">
+                <img src="plazatoros.jpg" alt="Foto aerea de la plaza de toros de sevilla" class="imagenes">
+                <p>La <b>Plaza de Toros de la Maestranza</b> es una de las plazas taurinas más emblemáticas de <b>Sevilla, España</b>.  
+                    Construida en el <b>siglo XVIII</b>, destaca por su arquitectura barroca y su icónica fachada blanca y amarilla.  
+                    Es sede de la prestigiosa <b>Feria de Abril</b> y ha acogido a las más grandes figuras del toreo.  
+                    Además, alberga el <b>Museo Taurino</b>, donde se exhiben trajes, carteles y otros elementos históricos de la tauromaquia.</p>                 
+            </div>
+        </div>
+
+        <div class="accItem">
+            <a href="#" class="accCabecera" onclick="toggleElements(this)">Acciones del Acordeón
+                <img src="flechaabajo.png" class="flechaAbajo">     
+            </a>
+            <div class="accContenido">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dicta repudiandae nihil porro quia aspernatur, dolorem harum eligendi et vero cum consequatur nostrum quod laboriosam. Laboriosam, ducimus! Doloremque, recusandae ipsa?</p>
+                <div class="botones">
+                    <button>CANCEL</button>
+                    <button>AGREE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
