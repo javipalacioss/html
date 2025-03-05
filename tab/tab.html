@@ -4,124 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabs CSS</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        display: auto;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      input.tab2 {
-        margin-left: 50px;
-        margin-top: 10px;
-        width: 200px;
-      }
-
-      input.tab3 {
-        margin-left: 1px;
-        margin-top: 10px;
-        width: 50px;
-      }
-
-      label.tab03 {
-        margin-left: 1px;
-      }
-
-      label {
-        margin-left: 50px;
-        color: rgb(90, 90, 90);
-      }
-
-      
-      .tabs {
-        display: flex;
-        gap: 10px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-      }
-
-      div.tabs {
-        width: 99%;
-      }
-
-      .tabs a {
-        text-decoration: none;
-        padding: 10px 15px;
-        background-color: #ddd;
-        color: #333;
-        border-radius: 5px 5px 0 0;
-      }
-
-      .tabs a:hover {
-        background-color: #bbb;
-      }
-
-      div.button {
-        margin-left: 100px;
-        margin-top: 100px;
-      }
-
-      button {
-        margin: 10px;
-      }
-
-      button.cancel:hover {
-        background-color: red;
-      }
-
-      button.enviar:hover {
-        background-color: lime;
-      }
-
-      .tabs a:target,
-      .tabs a:focus {
-        background-color: antiquewhite;
-        font-weight: bold;
-      }
-
-      .tabContent {
-        display: none;
-        padding: 15px;
-        border: 2px solid #ccc;
-        background-color: antiquewhite;
-        border-radius: 0 0 5px 5px;
-      }
-
-      .tabContent:target {
-        display: block;
-      }
-
-      .tabContent:first-of-type {
-        display: block;
-      }
-
-      #tab01 {
-        overflow: auto;
-        width: 98%;
-        height: 50%;
-        font-family: "Times New Roman", Times, serif;
-      }
-
-      #tab02,
-      #tab03,
-      #tab04 {
-        width: 98%;
-        height: 50%;
-      }
-
-      div#div03{
-        display: flex;
-        align-items: flex-start;
-      }
-
-      div.subDivs{
-        display: block;
-        flex-direction: column;
-
-      }
-
-    </style>
+    <link rel="stylesheet" href="tab.css" />
   </head>
   <body>
     <div class="tabs">
@@ -616,58 +499,68 @@
     </div>
 
     <div class="tabContent" id="tab03">
-    <div class="subDivs">
-      <label for="edad" class="tab3">Edad:</label>
-      <input type="number" class="tab3" />
-    </div>
+      <div class="subDivs">
+        <label for="edad" class="tab3">Edad:</label>
+        <input 
+        type="number" 
+        class="tab3" 
+        min="18"
+        required/>
+      </div>
       <br />
       <br />
       <div class="subDivs">
-      <p style="margin-left: 10px">Sexo:</p>
-      <input type="radio" id="hombre" name="sexo" value="hombre" class="tab3" />
-      <label for="hombre" class="tab03">Hombre</label><br />
-      <input type="radio" id="mujer" name="sexo" value="mujer" class="tab3" />
-      <label for="mujer" class="tab03">Mujer</label><br />
-    </div>
+        <p style="margin-left: 10px">Sexo:</p>
+        <input
+          type="radio"
+          id="hombre"
+          name="sexo"
+          value="hombre"
+          class="tab3"
+        />
+        <label for="hombre" class="tab03">Hombre</label><br />
+        <input type="radio" id="mujer" name="sexo" value="mujer" class="tab3" />
+        <label for="mujer" class="tab03">Mujer</label><br />
+      </div>
       <br />
       <br />
       <div class="subDivs">
-      <p style="margin-left: 10px">Nacionalidad:</p>
-      <input
-        type="radio"
-        id="francesa"
-        name="nacionalidad"
-        value="francesa"
-        class="tab3"
-      />
-      <label for="francesa" class="tab03">Francesa</label><br />
-      <input
-        type="radio"
-        id="italiana"
-        name="nacionalidad"
-        value="italiana"
-        class="tab3"
-      />
-      <label for="italiana" class="tab03">Italiana</label><br />
-      <input
-        type="radio"
-        id="espanola"
-        name="nacionalidad"
-        value="espanola"
-        class="tab3"
-      />
-      <label for="espanola" class="tab03">Española</label><br />
-      <input
-        type="radio"
-        id="inglesa"
-        name="nacionalidad"
-        value="inglesa"
-        class="tab3"
-      />
-      <label for="inglesa" class="tab03">Inglesa</label><br />
-        <br>
-        <br>
-    </div>
+        <p style="margin-left: 10px">Nacionalidad:</p>
+        <input
+          type="radio"
+          id="francesa"
+          name="nacionalidad"
+          value="francesa"
+          class="tab3"
+        />
+        <label for="francesa" class="tab03">Francesa</label><br />
+        <input
+          type="radio"
+          id="italiana"
+          name="nacionalidad"
+          value="italiana"
+          class="tab3"
+        />
+        <label for="italiana" class="tab03">Italiana</label><br />
+        <input
+          type="radio"
+          id="espanola"
+          name="nacionalidad"
+          value="espanola"
+          class="tab3"
+        />
+        <label for="espanola" class="tab03">Española</label><br />
+        <input
+          type="radio"
+          id="inglesa"
+          name="nacionalidad"
+          value="inglesa"
+          class="tab3"
+        />
+        <label for="inglesa" class="tab03">Inglesa</label><br />
+        <br />
+        <br />
+      </div>
       <div class="buttons">
         <button class="cancel">Cancel</button>
         <button class="enviar">Enviar</button>
@@ -675,17 +568,22 @@
     </div>
 
     <div class="tabContent" id="tab04">
-        <div>
-            <img src="https://a.ccdn.es/cnet/contents/media/own/2022/6/1299003.jpg/900x505cut/" alt="Imagen google Maps" class="imgMaps" style="height: 400px; width:500px">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <textarea rows="26" cols="25" placeholder="Comentario"></textarea>
-        </div>
-        <br>
-        <br>
-        <div class="buttons">
-            <button class="cancel">Cancel</button>
-            <button class="enviar">Enviar</button>
-          </div>
+      <div>
+        <img
+          src="https://a.ccdn.es/cnet/contents/media/own/2022/6/1299003.jpg/900x505cut/"
+          alt="Imagen google Maps"
+          class="imgMaps"
+          style="height: 400px; width: 500px"
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea rows="26" cols="25" placeholder="Comentario"></textarea>
+      </div>
+      <br />
+      <br />
+      <div class="buttons">
+        <button class="cancel">Cancel</button>
+        <button class="enviar">Enviar</button>
+      </div>
     </div>
   </body>
 </html>
