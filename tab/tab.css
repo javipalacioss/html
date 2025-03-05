@@ -111,7 +111,6 @@ html,
       div.subDivs{
         display: block;
         flex-direction: column;
-
       }
 
       input:valid {
