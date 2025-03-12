@@ -8,7 +8,7 @@
       .formGroup {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr auto;
+        grid-template-rows: auto 1fr 1fr auto;
         gap: 40px;
         margin: auto;
       }
@@ -23,32 +23,44 @@
         width: 80%;
       }
 
-      /*definimos las columnas y las filas con grid-column y grid-row respectivamente */
+      /* Definimos que el contenedor ocupe la primera fila y las dos columnas */
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-image: url('img.webp');
+        background-position: center;
+        grid-column: span 2;
+        grid-row: 1;
+      }
+
+      /* Definimos las columnas y las filas con grid-column y grid-row respectivamente */
       .nombre {
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 2;
       }
       .apellidos {
         grid-column: 2;
-        grid-row: 1;
+        grid-row: 2;
       }
       .email {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 3;
       }
       .mensaje {
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 3;
       }
 
-      /*para el boton indicamos gird-row 3 lo cual seria la tercera fila*/
+      /* Para el botón indicamos grid-row 4, lo cual sería la cuarta fila */
       .boton {
         grid-column: span 2;
-        grid-row: 3;
+        grid-row: 4;
         justify-self: center;
       }
 
-      /*indicamos 770 de ancho para que cuando estemos minimizando la ventana no llegue hasta el limite del boton para cuando se transforme*/
+      /* Indicamos 770px de ancho para que cuando estemos minimizando la ventana 
+         no llegue hasta el límite del botón para cuando se transforme */
       button {
         width: 770px;
         padding: 10px;
@@ -60,7 +72,8 @@
           flex-direction: column;
           align-items: center;
           width: 90%;
-          /*indico menor gap 40px que es el original para que no quede tan espaciado al cambiar el tamaño de la ventana*/
+          /* Indico menor gap 40px que es el original para que no quede tan espaciado 
+             al cambiar el tamaño de la ventana */
           gap: 25px;
         }
 
@@ -70,27 +83,30 @@
 
         button {
           width: 100%;
-        /*indico padding 5px para que el boton no siga manteniendo el tamaño tan grande cuando esta la ventana en tamaño mas pequeño*/
+          /* Indico padding 5px para que el botón no siga manteniendo el tamaño tan grande 
+             cuando la ventana esté en un tamaño más pequeño */
           padding: 5px;
         }
+
+        .container{
+          background-image: url('img2.webp');
+          width: 50%;
+          height: 50vh;
+      }
       }
     </style>
   </head>
   <body>
     <form action="">
       <div class="formGroup">
+        <div class="container"></div>
         <div class="nombre">
           <label for="nombre">Nombre:</label>
           <input type="text" placeholder="Nombre" id="nombre" name="nombre" />
         </div>
         <div class="apellidos">
           <label for="apellidos">Apellido:</label>
-          <input
-            type="text"
-            placeholder="Apellido"
-            id="apellidos"
-            name="apellidos"
-          />
+          <input type="text" placeholder="Apellido" id="apellidos" name="apellidos" />
         </div>
         <div class="email">
           <label for="email">Email:</label>
@@ -98,12 +114,7 @@
         </div>
         <div class="mensaje">
           <label for="mensaje">Mensaje:</label>
-          <input
-            type="text"
-            placeholder="Mensaje"
-            id="mensaje"
-            name="mensaje"
-          />
+          <input type="text" placeholder="Mensaje" id="mensaje" name="mensaje" />
         </div>
         <div class="boton">
           <button type="submit">Submit</button>
