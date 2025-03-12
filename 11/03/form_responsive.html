@@ -23,7 +23,7 @@
         width: 80%;
       }
 
-      /* Definimos que el contenedor ocupe la primera fila y las dos columnas */
+      
       .container {
         width: 85%;
         height: 75vh;
@@ -35,7 +35,7 @@
         justify-self: center;
       }
 
-      /* Definimos las columnas y las filas con grid-column y grid-row respectivamente */
+      /*definimos las columnas y las filas con grid-column y grid-row respectivamente */
       .nombre {
         grid-column: 1;
         grid-row: 2;
@@ -53,15 +53,15 @@
         grid-row: 3;
       }
 
-      /* Para el botón indicamos grid-row 4, lo cual sería la cuarta fila */
+      /*para el boton indicamos grid-row 4, lo cual seria la cuarta fila */
       .boton {
         grid-column: span 2;
         grid-row: 4;
         justify-self: center;
       }
 
-      /* Indicamos 770px de ancho para que cuando estemos minimizando la ventana 
-         no llegue hasta el límite del botón para cuando se transforme */
+      /*indicamos 770px de ancho para que cuando estemos minimizando la ventana 
+         no llegue hasta el limite del boton para cuando se transforme */
       button {
         width: 770px;
         padding: 10px;
@@ -73,7 +73,7 @@
           flex-direction: column;
           align-items: center;
           width: 90%;
-          /* Indico menor gap 40px que es el original para que no quede tan espaciado 
+          /*indico menor gap 40px que es el original para que no quede tan espaciado 
              al cambiar el tamaño de la ventana */
           gap: 25px;
         }
@@ -84,7 +84,7 @@
 
         button {
           width: 100%;
-          /* Indico padding 5px para que el botón no siga manteniendo el tamaño tan grande 
+          /*indico padding 5px para que el botón no siga manteniendo el tamaño tan grande 
              cuando la ventana esté en un tamaño más pequeño */
           padding: 5px;
         }
