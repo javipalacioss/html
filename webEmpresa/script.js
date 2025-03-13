@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         const notification = document.createElement("div");
         notification.classList.add("notification");
-        notification.innerHTML = "🎉 ¡Bienvenido a nuestra web profesional!";
         document.body.appendChild(notification);
         setTimeout(() => notification.classList.add("fade"), 4000);
         setTimeout(() => notification.remove(), 5000);
