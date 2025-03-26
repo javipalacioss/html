@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container con Sidebar</title>
+    <style>
+      .container {
+        display: grid;
+        width: 100%;
+        height: 95vh;
+        gap: 10px 10px;
+        grid-gap: 1rem;
+        grid-template-columns:
+          [main-start contents-start content1-start] 1fr
+          [content2-start] 1fr
+          [content3-start finder-end] 1fr
+          [content4-start] 1fr
+          [contents-end main-end];
+
+        grid-template-rows:
+          [rows-start row1-start] 80px
+          [row2-start] 60px
+          [row3-start] 1fr
+          [row4-start] 1fr
+          [row5-start] 100px
+          [rows-end];
+      }
+
+      .header {
+        grid-column: main-start / main-end;
+        grid-row: row1-start / row2-start;
+      }
+
+      .finder {
+        grid-column: main-start / content3-start;
+        grid-row: row2-start / row3-start;
+      }
+
+      .navigator {
+        grid-column: content3-start / contents-end;
+        grid-row: row2-start / row3-start;
+      }
+
+      .content-1 {
+        grid-column: content1-start / content2-start;
+        grid-row: row3-start / row4-start;
+      }
+
+      .content-2 {
+        grid-column: content2-start / content3-start;
+        grid-row: row3-start / row4-start;
+      }
+
+      .content-3 {
+        grid-column: content3-start / content4-start;
+        grid-row: row3-start / row4-start;
+      }
+
+      .content-4 {
+        grid-column: content4-start / contents-end;
+        grid-row: row3-start / row4-start;
+      }
+
+      .content-5 {
+        grid-column: content1-start / content2-start;
+        grid-row: row4-start / row5-start;
+      }
+
+      .content-6 {
+        grid-column: content2-start / content3-start;
+        grid-row: row4-start / row5-start;
+      }
+
+      .content-7 {
+        grid-column: content3-start / content4-start;
+        grid-row: row4-start / row5-start;
+      }
+
+      .content-8 {
+        grid-column: content4-start / contents-end;
+        grid-row: row4-start / row5-start;
+      }
+
+      .footer {
+        grid-column: main-start / main-end;
+        grid-row: row5-start / rows-end;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+
+      .header,
+      .finder,
+      .navigator,
+      .footer,
+      .content-1,
+      .content-2,
+      .content-3,
+      .content-4,
+      .content-5,
+      .content-6,
+      .content-7,
+      .content-8 {
+        background-image: linear-gradient(to bottom right,aqua, lime);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 3px solid #171717;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="finder"></div>
+      <div class="navigator"></div>
+      <div class="content-1"></div>
+      <div class="content-2"></div>
+      <div class="content-3"></div>
+      <div class="content-4"></div>
+      <div class="content-5"></div>
+      <div class="content-6"></div>
+      <div class="content-7"></div>
+      <div class="content-8"></div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
