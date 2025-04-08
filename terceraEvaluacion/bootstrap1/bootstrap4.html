@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio 4</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 400px;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    tbody tr:hover {
+      background-color: #ffe082;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    @media(max-width: 600px) {
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Tabla de Clientes</h2>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="contenido-tabla">
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const clientes = [
+    { nombre: "Ana", apellido: "López", fecha: "1991-03-15", email: "ana@gmail.com" },
+    { nombre: "Pedro", apellido: "Sánchez", fecha: "1985-07-22", email: "pedro@gmail.com" },
+    { nombre: "Marta", apellido: "Gómez", fecha: "1999-12-01", email: "marta@gmail.com" },
+    { nombre: "Luis", apellido: "Fernández", fecha: "1990-09-09", email: "luis@gmail.com" }
+  ];
+
+  const tabla = document.getElementById('contenido-tabla');
+
+  clientes.forEach(cliente => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${cliente.nombre}</td>
+        <td>${cliente.apellido}</td>
+        <td>${cliente.fecha}</td>
+        <td>${cliente.email}</td>
+      </tr>
+    `;
+  });
+</script>
+
+</body>
+</html>
