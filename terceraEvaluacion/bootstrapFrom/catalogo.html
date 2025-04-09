@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Catálogo de Productos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .product-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .product-price {
+      color: #28a745;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    body {
+      padding-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5498/5498553.png" alt="Logo" style="width:60px; height:60px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Cerrar sesión</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3">
+  <h3>Catálogo de Productos</h3>
+  <p>Explora nuestra selección de productos disponibles.</p>
+
+  <div class="row g-4" id="productList">
+
+    <div class="col-md-4 product-card" data-category="Electrónica">
+      <div class="card">
+        <img src="https://prod.adb.col.movistar.es/static-emp/terminales/terminales744x558/samsung/samsung-galaxy-s25-vista-01.png" class="card-img-top product-image" alt="Producto 1">
+        <div class="card-body">
+          <h5 class="card-title product-title">Smartphone Samsung Galaxy</h5>
+          <p class="card-text product-description">Smartphone de última generación con pantalla AMOLED y 128GB de almacenamiento.</p>
+          <p class="product-price">$499.99</p>
+          <a href="detalle1.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-card" data-category="Hogar">
+      <div class="card">
+        <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/gallery/home/floorcare/cordless/v11/nickel-red/GALLERY_IMAGE_Hair_Screw_Tool_LB.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&fmt=pjpeg&wid=640" class="card-img-top product-image" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title product-title">Aspiradora Dyson V11</h5>
+          <p class="card-text product-description">Aspiradora sin cable con potente succión y hasta 60 minutos de autonomía.</p>
+          <p class="product-price">$649.99</p>
+          <a href="detalle2.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-card" data-category="Deportes">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTljmcqSmnPwFPnK19q1B-IBv-rvnO193EQPA&s" class="card-img-top product-image" alt="Producto 3">
+        <div class="card-body">
+          <h5 class="card-title product-title">Bicicleta de montaña Trek X-Caliber</h5>
+          <p class="card-text product-description">Bicicleta de montaña ideal para senderismo y rutas de aventura.</p>
+          <p class="product-price">$799.99</p>
+          <a href="detalle3.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-card" data-category="Moda">
+      <div class="card">
+        <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/214efa1f-49df-4c13-9994-47ffcc183c60/M+AIR+MAX+ALPHA+TRAINER+6.png" class="card-img-top product-image" alt="Producto 4">
+        <div class="card-body">
+          <h5 class="card-title product-title">Zapatos deportivos Nike Air Max</h5>
+          <p class="card-text product-description">Zapatos cómodos y de alto rendimiento, ideales para el día a día.</p>
+          <p class="product-price">$119.99</p>
+          <a href="detalle4.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-card" data-category="Electrónica">
+      <div class="card">
+        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/inspiron-notebooks/15-3535-amd/media-gallery/black/notebook-inspiron-15-3535-nt-plastic-black-gallery-2.psd?fmt=pjpg&pscan=auto&scl=1&wid=4535&hei=3009&qlt=100,1&resMode=sharp2&size=4535,3009&chrss=full&imwidth=5000" class="card-img-top product-image" alt="Producto 5">
+        <div class="card-body">
+          <h5 class="card-title product-title">Laptop Dell Inspiron 15</h5>
+          <p class="card-text product-description">Laptop de 15.6 pulgadas con procesador Intel i7 y 512GB de SSD.</p>
+          <p class="product-price">$899.99</p>
+          <a href="detalle5.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 product-card" data-category="Hogar">
+      <div class="card">
+        <img src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202407/16/00104741829883____5__1200x1200.jpg" class="card-img-top product-image" alt="Producto 6">
+        <div class="card-body">
+          <h5 class="card-title product-title">Microondas Samsung 23L</h5>
+          <p class="card-text product-description">Microondas con tecnología de cocción rápida y función de grill.</p>
+          <p class="product-price">$129.99</p>
+          <a href="detalle6.html" class="btn btn-primary">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
