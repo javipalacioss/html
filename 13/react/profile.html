@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const user = {
+            name: 'Hedy Lamarr',
+            imageUrl: 'imagen1.jpg',
+            imageSize: 90,
+          };
+          
+         function Profile() {
+            return (
+              <>
+                <h1>{user.name}</h1>
+                <img
+                  className="avatar"
+                  src={user.imageUrl}
+                  alt={'Foto de ' + user.name}
+                  style={{
+                    width: user.imageSize,
+                    height: user.imageSize
+                  }}
+                />
+              </>
+            );
+          }
+
+      function MyApp() {
+        return (
+          <div>
+            <Profile/>
+          </div>
+        );
+      }
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+
+    </script>
+  </body>
+</html>
